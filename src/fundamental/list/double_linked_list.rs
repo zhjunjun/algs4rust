@@ -8,8 +8,8 @@ struct DoubleLinkedList<T> {
 
 #[derive(Debug)]
 struct DoubleLinkedListNode<T> {
-    // Rc类型和&引用一样，提供了“共享性”, 允许多个指针指向同一块内存。
-    // 因此它必然不能提供“可变性”。它没有违反“内存安全”原则，
+    // Rc类型和&引用一样，提供了“共享性”, 允许多个指针指向同一块内存
+    // 因此它必然不能提供“可变性”。它没有违反“内存安全”原则
     // 它没有设计直接修改内部数据的成员方法，每个所有者对内部数据只有只读功能，因此，它是安全的
     next: Option<Rc<DoubleLinkedListNode<T>>>,
     prev: RefCell<Option<Weak<DoubleLinkedListNode<T>>>>,
