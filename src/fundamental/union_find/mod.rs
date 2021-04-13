@@ -1,4 +1,5 @@
 pub mod quick_find;
+mod quick_union;
 
 pub trait UF {
     fn new(n: usize) -> Self;

@@ -40,15 +40,10 @@ impl fmt::Display for UnionFind {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_quick_find() {
-        let mut uf = UnionFind::new(100);
-        uf.union(11, 22);
-        println!("{}", uf);
-        println!("{}", uf.connected(11, 22));
-    }
+#[test]
+fn test_quick_find() {
+    let mut uf = UnionFind::new(100);
+    uf.union(11, 22);
+    println!("{}", uf);
+    println!("{}", uf.connected(11, 22));
 }
